@@ -20,7 +20,27 @@
         </div>
         <div class="footer">
             <p class="edit">[<a href="/posts/{{ $post->id }}/edit">編集</a>]</p>
+            
+            <form action="/posts/{{ $post->id }}" id="form_delete" method="POST">
+                @method('DELETE')
+                <button type="submit">delete</button>
+                /*
+                <input type="submit" style="display:none">
+                <p class='delete'>[<span onclick="return deletePost(this)">delete</span>]</p>
+                */
+            </form>
+            
             <a href="/posts">戻る</a>
         </div>
+        /*
+        <script>
+            function deletePost(e) {
+                'use strict'
+                if (confirm('削除すると復元できません。\n本当に削除しますか？'))　{
+                    document.getElementBy('form_delete').submit();
+                }
+            }
+        </script>
+        */
     </body>
 </html>
