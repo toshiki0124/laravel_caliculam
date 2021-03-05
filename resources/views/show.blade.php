@@ -14,12 +14,13 @@
         </h1>
         <div class="content">
             <div class="content_post">
-                <h3>本文</h3>
                 <p>{{ $post->body }}</p>
+                <p class='updated_at'>{{ $post->updated_at }}</p>
             </div>
         </div>
         <div class="footer">
-            <a href="/">戻る</a>
+            <p class="edit">[<a href="/posts/{{ $post->id }}/edit">編集</a>]</p>
+            <a href="/posts">戻る</a>
         </div>
     </body>
 </html>
