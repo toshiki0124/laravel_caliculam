@@ -6,16 +6,15 @@
     </head>
     <body>
         <form action="/posts" method="POST">
-            @csrf
             <div class="title">
-                <h2>Title</h3>
+                <h2>Title</h2>
                 <input type="text" name="post[title]" placeholder="タイトル"/>
             </div>
             <div class="body">
-                <h4>message</h4>
-                <textarea name="post[body]" placeholder="今日も1日お疲れ様でした。"></textarea>
+                <h2>Body</h2>
+                <textarea name="post[body]" placeholder="今日も1日お疲れさまでした。"></textarea>
             </div>
-            <input type="submit" value="保存"/>
+            <input type="submit" value="store"/>
         </form>
         <div class="back">[<a href="/posts">back</a>]</div>
     </body>
