@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <h1 class="title">
+        <h1 class="title">S
             {{ $post->title }}
         </h1>
         <div class="content">
@@ -24,15 +24,15 @@
             <form action="/posts/{{ $post->id }}" id="form_delete" method="POST">
                 @method('DELETE')
                 <button type="submit">delete</button>
-                /*
+                
                 <input type="submit" style="display:none">
                 <p class='delete'>[<span onclick="return deletePost(this)">delete</span>]</p>
-                */
+                
             </form>
             
             <a href="/posts">戻る</a>
         </div>
-        /*
+        
         <script>
             function deletePost(e) {
                 'use strict'
@@ -41,6 +41,6 @@
                 }
             }
         </script>
-        */
+        
     </body>
 </html>
